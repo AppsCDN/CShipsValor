@@ -2,7 +2,10 @@
 <html>
 <head>
 <meta charset="UTF-8"/>
-<title>Document</title>
+<title>CryptoShips</title>
+<style>
+  li {list-style-type: none;}
+</style>
 </head>
 <body>
   <div id="cryptoships"></div>
@@ -12,9 +15,9 @@
     .then(data => {
     console.log(data);
     document.getElementById("cryptoships").innerHTML = 
-      ' <div class="cship-valor"> '
-      + ' <div class="valor-usd">'+ data.cryptoships.usd +'</div> '
-      + ' <div class="valor-brl">'+ data.cryptoships.brl +'</div></div> '
+      ' <ul class="cship-valor"> '
+      + ' <li class="valor-usd">'+ data.cryptoships.usd +'</li> '
+      + ' <li class="valor-brl">'+ data.cryptoships.brl +'</li></ul> '
   });
   </script>
 </body>
